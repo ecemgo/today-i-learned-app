@@ -1,2 +1,2 @@
-# today-i-learned-app
+# Today I Learned App
  
