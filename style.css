@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   background-color: #292524;
   color: #fafaf9;
@@ -15,6 +19,8 @@ body {
   max-width: 1500px;
   margin: 0 auto;
 }
+
+/* HEADER */
 
 header {
   display: flex;
@@ -34,19 +40,21 @@ header {
   width: 68px;
 }
 
+h1 {
+  font-size: 2.625rem;
+  text-transform: uppercase;
+  font-family: "Coiny", cursive;
+  line-height: 1;
+  margin-top: 6px;
+}
+
+/* FORM */
+
 .fact-form {
   background-color: #44403c;
   margin-bottom: 40px;
   padding: 16px 40px;
   text-align: center;
-}
-
-h1 {
-  font-size: 42px;
-  text-transform: uppercase;
-  font-family: "Coiny", cursive;
-  line-height: 1;
-  margin-top: 6px;
 }
 
 main {
@@ -55,11 +63,54 @@ main {
   gap: 48px;
 }
 
+/* CATEGORY */
+
+.category {
+  margin-bottom: 16px;
+}
+
+.btn {
+  border: none;
+  border-radius: 50px;
+  font-family: "Coiny", cursive;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 16px 0 13px;
+  background-image: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  transform: scale(110%) rotate(-2deg);
+}
+
+.btn-large {
+  font-size: 1.25rem;
+  padding: 20px 32px 17px;
+}
+
+.btn-all-categories {
+  border-radius: 5px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.btn-category {
+  border-radius: 5px;
+  width: 100%;
+  background-image: none;
+}
+
+/* FACT */
+
 .fact {
   display: flex;
   align-items: center;
   gap: 24px;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1.4;
   background-color: #44403c;
   margin-bottom: 16px;
@@ -69,17 +120,10 @@ main {
 
 .tag {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Coiny", cursive;
   padding: 3px 10px 0;
-}
-
-.vote-buttons {
-  margin-left: auto;
-}
-
-ul {
-  list-style: none;
+  border-radius: 100px;
 }
 
 .source:link,
@@ -93,6 +137,30 @@ ul {
 .source:hover,
 .source:active {
   color: #3b82f6;
+}
+
+.vote-buttons {
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.vote-buttons button {
+  border: none;
+  background-color: #78716c;
+  font-size: 1.125rem;
+  padding: 6px 12px;
+  border-radius: 100px;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.vote-buttons button:hover {
+  background-color: #292524;
 }
 
 /* MEDIA QUERIES */
