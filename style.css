@@ -8,7 +8,12 @@ body {
   background-color: #292524;
   color: #fafaf9;
   font-family: "Sono", sans-serif;
-  padding: 40px;
+  padding: 48px 64px;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 header {
@@ -22,6 +27,11 @@ header {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+.logo img {
+  height: 68px;
+  width: 68px;
 }
 
 .fact-form {
@@ -72,6 +82,19 @@ ul {
   list-style: none;
 }
 
+.source:link,
+.source:visited {
+  color: #a8a29e;
+  text-decoration: none;
+  margin-left: 12px;
+  transition: all 0.3s linear;
+}
+
+.source:hover,
+.source:active {
+  color: #3b82f6;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 900px) {
@@ -86,7 +109,7 @@ ul {
     padding: 24px;
   }
 
-  .header {
+  header {
     flex-direction: column;
     gap: 16px;
   }
