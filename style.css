@@ -202,6 +202,10 @@ main {
   background-color: #292524;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 1200px) {
