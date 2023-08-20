@@ -1,3 +1,5 @@
+"use strict";
+
 const shareButton = document.querySelector(".btn-share");
 const factForm = document.querySelector(".fact-form");
 
