@@ -25,3 +25,4 @@ yarn-error.log*
 # v1
 /v1/sample.js
 /v1/appdata.js
+/v1/app.js

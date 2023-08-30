@@ -60,6 +60,24 @@ factsList.innerHTML = "";
 // Load data from Supabase
 loadFacts();
 
+async function loadFacts() {
+  const res = await fetch(
+    "https://apjexwpnuvqvwrdqbpoj.supabase.co/rest/v1/facts",
+    {
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFwamV4d3BudXZxdndyZHFicG9qIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTIyMDQyNTMsImV4cCI6MjAwNzc4MDI1M30.Hhr1y0N_1V2qLu2w_wbMjClue8zu1Kdi2ADj2zyIbcY",
+        authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFwamV4d3BudXZxdndyZHFicG9qIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTIyMDQyNTMsImV4cCI6MjAwNzc4MDI1M30.Hhr1y0N_1V2qLu2w_wbMjClue8zu1Kdi2ADj2zyIbcY",
+      },
+    }
+  );
+  const data = await res.json();
+  // const filteredData = data.filter((fact) => fact.category === "society");
+  // console.log(data);
+  createFactList(data);
+}
+
 function createFactList(dataArray) {
   // factsList.insertAdjacentHTML("afterbegin", "<li>Jonas<li/>");
   // factsList.insertAdjacentHTML("afterbegin", "<li>Mike<li/>");
